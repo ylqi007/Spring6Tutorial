@@ -1,6 +1,8 @@
 package com.atguigu.pojo;
 
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,6 +15,9 @@ import java.lang.reflect.InvocationTargetException;
  * @Create: 10/19/24 21:40
  */
 public class UserTest {
+
+    // 创建Logger对象
+    private Logger logger = LoggerFactory.getLogger(UserTest.class);
 
     @Test
     public void test01() {
@@ -39,5 +44,8 @@ public class UserTest {
         User user = (User)clazz.getDeclaredConstructor().newInstance();
 
         System.out.println("test02: user = " + user);
+
+        // 手动写日志
+        logger.info("手动日志: UserTest.test02() ...");
     }
 }
