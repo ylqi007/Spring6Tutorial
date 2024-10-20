@@ -53,6 +53,27 @@ applicationContext.getBean(xxx);
 * 将通过@Resource实现注入的事例代码放入`com.atguigu.resource`包下.
 * 使用`@Resource`注解需要引入JDK扩展包，Jakarta
 
+### 3.3 基于全注解的Spring开发
+使用一个配置类(`SpringConfig.java`)替代配置文件(比如`resources/beans.xml`)
+```java
+@Configuration // 这是一个配置类
+@ComponentScan("com.atguigu")   // 开启注解扫描
+public class SpringConfig {
+
+}
+
+public class UserControllerConfigTest {
+   @Test
+   public void test01() {
+      // 加载配置类，
+      ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);   // 此处使用AnnotationConfigApplicationContext，而不是ClassPathXmlApplicationContext
+
+      UserController userController = applicationContext.getBean("resourceUserController", UserController.class);
+      userController.add();
+   }
+}
+```
+
 ## Spring Bean生命周期
 ![](docs/images/Spring.Bean.Lifecycle.png)
 
