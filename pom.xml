@@ -13,12 +13,15 @@
         <module>Spring-02-IoC-xml</module>
         <module>Spring-03-IoC-Annotation</module>
         <module>Spring-05-aop</module>
+        <module>Spring-06-JUnit</module>
     </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <spring.version>6.1.10</spring.version>
     </properties>
 
     <dependencyManagement>
@@ -28,7 +31,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
-                <version>6.1.10</version>
+                <version>${spring.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
@@ -71,6 +74,27 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aspects</artifactId>
                 <version>6.0.2</version>
+            </dependency>
+
+            <!--spring对junit的支持相关依赖-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!--junit5测试-->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>5.9.0</version>
+            </dependency>
+
+            <!-- junit4测试 -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.2</version>
             </dependency>
 
         </dependencies>

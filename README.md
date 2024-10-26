@@ -10,6 +10,8 @@
 5. Module: [Spring-05-aop](Spring-05-aop)
    * 代理模式
    * AOP概念及相关术语
+6. Module: [Spring-06-JUnit](Spring-06-JUnit)
+   * 整合Junit5 and Junit4
 
 
 ## 2. IoC based on XML
@@ -125,3 +127,4 @@ TODO
 * CoderMast GitHub: https://github.com/codermast/Spring6 (有一些尚硅谷的code可以参考，但是不完全)
 * 📗🌟笔记: https://github.com/mouday/atguigu-spring6
 * [一张图搞定SpringBean的生命周期，再也不怕繁多的回调接口啦！](https://www.modb.pro/db/422673)
+* 📗🌟不错的技术博客 https://juejin.cn/user/3562073406314311/posts
