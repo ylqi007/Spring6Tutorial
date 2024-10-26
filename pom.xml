@@ -12,6 +12,7 @@
         <module>Spring-01-Demo</module>
         <module>Spring-02-IoC-xml</module>
         <module>Spring-03-IoC-Annotation</module>
+        <module>Spring-05-aop</module>
     </modules>
 
     <properties>
@@ -57,6 +58,19 @@
                 <groupId>jakarta.annotation</groupId>
                 <artifactId>jakarta.annotation-api</artifactId>
                 <version>3.0.0</version>
+            </dependency>
+
+            <!--spring aop依赖-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>6.0.2</version>
+            </dependency>
+            <!--spring aspects依赖-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>6.0.2</version>
             </dependency>
 
         </dependencies>
