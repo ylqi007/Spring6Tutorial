@@ -1,4 +1,3 @@
-## 1. Spring入门案例
 1. Module: [Spring-01-Demo](Spring-01-Demo)
 2. Module: [Spring-02-IoC-xml](Spring-02-IoC-xml)
    * 这个module是通过xml实现IoC配置的演示项目工程，暂时忽略，所以只是创建这个module作为一个placeholder，并没有代码实现。
@@ -12,6 +11,9 @@
    * AOP概念及相关术语
 6. Module: [Spring-06-JUnit](Spring-06-JUnit)
    * 整合Junit5 and Junit4
+
+
+## 1. Spring入门案例
 
 
 ## 2. IoC based on XML
@@ -120,6 +122,33 @@ TODO
 3. 作用
    * 简化代码：把方法中固定位置的重复的代码抽取出来，让被抽取的方法更专注于自己的核心功能，提高内聚性。
    * 代码增强：把特定的功能封装到切面类中，看哪里有需要，就往上套，被套用了切面逻辑的方法就被切面给增强了。
+
+## 6. JUnit
+* JUnit4: `@RunWith(SpringJUnit4ClassRunner.class)` + `@ContextConfiguration(value = "classpath:bean.xml")`
+* JUnit5: `@SpringJUnitConfig(locations = "classpath:bean.xml")`
+
+
+## 7. 事务
+### 7.1 JdbcTemplate
+#### 1. 简介
+Spring框架对JDBC进行封装，使用JdbcTemplate(`org.springframework.jdbc.core.JdbcTemplate`)方便实现对数据库操作。
+* [Spring: Data Access with JDBC](https://docs.spring.io/spring-framework/reference/data-access/jdbc.html)
+* 🟩🌟[Spring: Using the JDBC Core Classes to Control Basic JDBC Processing and Error Handling](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html)
+
+#### 2. 准备工作
+1. 准备子模块
+2. 添加依赖
+3. 创建`jdbc.properties`
+4. 配置Spring的配置文件
+5. 准备数据库与测试表
+
+#### 3. 实现CRUD
+1. 装配 JdbcTemplate
+2. 测试增删改功能: `Spring-07-jdbc-tx/src/test/java/com/atguigu/JdbcTemplateTest.java`
+
+### 7.2 声明式事务概念
+### 7.3 基于注解的声明式事务
+### 7.4 基于XML的声明式事务
 
 ## Resource
 * 课件: [Spring6.pdf](docs/Spring6.pdf)
